@@ -31,3 +31,7 @@ def tu_vista(request):
     # Pasar la imagen a la plantilla
     context = {'imagen': imagen}
     return render(request, 'tu_plantilla.html', context)
+
+def movie_list(request):
+    movies = Movie.objects.all()
+    return render(request, 'movie_list.html', {'movies': movies})
