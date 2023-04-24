@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mis películas favoritas</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+  </head>  
+  <body>
+    <h1>Mis películas favoritas</h1>
+    <div class="movies">
+      {% for movie in movies %}
+      <div class="movie">
+        <img src="{{ movie.poster.url }}" alt="Poster de la película">
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>Lista de películas</h1>
+
+  {% for movie in object_list %}
+    <div class="movie">
+      <img src="{{ movie.poster.url }}" alt="{{ movie.title }}">
+
+      <div class="movie-details">
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+        <p>Fecha de lanzamiento: {{ movie.release_date }}</p>
+        <p>Director: {{ movie.director }}</p>
+        <p>Géneros:</p>
+        <ul>
+          {% for genre in movie.genres.all %}
+            <li>{{ genre.name }}</li>
+          {% endfor %}
+        </ul>
+        <p>Rating: {{ movie.rating }}</p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
