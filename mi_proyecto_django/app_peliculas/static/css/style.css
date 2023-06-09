@@ -33,6 +33,9 @@ img {
 	border:0;
 	vertical-align:top;
 	text-align:left;
+	width: 200px; /* Ancho fijo */
+	height: 300px; /* Alto fijo */
+	object-fit: cover;
 }
 ul, ol {
 	list-style:none;
@@ -125,8 +128,9 @@ ul, ol {
 }
 .movies li {
 	float:left;
-	width:286px;
+	width: 33.33%;
 	margin-right:15px;
+
 }
 .movies li.last {
 	margin-right:0;
@@ -139,8 +143,10 @@ ul, ol {
 	line-height:0;
 }
 .movies li img {
-	margin-left:-30px;
-	position:relative;
+
+	width: 200px;  /* Ancho fijo */
+	height: 300px; /* Alto fijo */
+	object-fit: cover; /* Ajustar la imagen sin deformarla */
 }
 .movies li p {
 	margin:5px 0 15px 0;
@@ -438,6 +444,7 @@ h4 {
 	font-size:.86em;
 	line-height:1.667em;
 	text-align:center;
+	clear: both;
 }
 #footer .left {
 	background:url(../images/footer-left.gif) no-repeat left top;

@@ -1,37 +1,21 @@
 from django.shortcuts import render
-from django.views.generic import ListView
 from .models import Movie
-
-
-def index(request):
-    return render(request, 'index.html')
-
-class MovieListView(ListView):
-    model = Movie
-    template_name = 'movie_list.html'
-
-
-from django.shortcuts import render
-from .models import Movie
-
-def movie_list(request):
-    movies = Movie.objects.all()
-    context = {'movies': movies}
-    return render(request, 'movie_list.html', context)
 
 def index(request):
     movies = Movie.objects.all()
-    context = {'movies': movies}
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', {'movies': movies})
 
-def tu_vista(request):
-    # Obtener el objeto de imagen desde el modelo
-    imagen = TuModelo.objects.get(id=1).poster
+def about_us(request):
+    return render(request, 'index/about_us.html')
 
-    # Pasar la imagen a la plantilla
-    context = {'imagen': imagen}
-    return render(request, 'tu_plantilla.html', context)
+def about(request):
+    return render(request, 'about.html')
 
-def movie_list(request):
-    movies = Movie.objects.all()
-    return render(request, 'movie_list.html', {'movies': movies})
+def articles(request):
+    return render(request, 'articles.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def sitemap(request):
+    return render(request, 'sitemap.html')

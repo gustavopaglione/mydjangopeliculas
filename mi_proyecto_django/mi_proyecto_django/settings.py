@@ -58,7 +58,7 @@ ROOT_URLCONF = 'mi_proyecto_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/User/Documents/Gustavo/python/MyDjangoPeliculas/mi_proyecto_django/app_peliculas/Templates'],
+        'DIRS': ['C:/Users/User/Documents/Gustavo/python/MyDjangoPeliculas/mi_proyecto_django/app_peliculas/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Mendoza'
 
 USE_I18N = True
 
