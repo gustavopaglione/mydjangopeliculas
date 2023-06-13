@@ -15,7 +15,7 @@ def articles(request):
     return render(request, 'articles.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, 'contact-us.html')
 
 def sitemap(request):
     return render(request, 'sitemap.html')
